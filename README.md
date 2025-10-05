@@ -176,52 +176,45 @@ array([[ 1,  2,  3,  0],
 # SUM of all numbers in a 2D array
 A.sum()
 129
-# MAX number in a 2D array
-A.max()
-22
-# Minimum
-A.min()
-0
-# Column wise mimimum value 
-np.amin(A, axis=0)
-array([1, 2, 1, 0])
-# Row wise mimimum value 
-np.amin(A, axis=1)
-array([0, 5, 1, 3])
-# Mean of all numbers in a 2D array
-A.mean()
-8.0625
-# Mean
-np.mean(A)
-8.0625
-# Median
-np.median(A)
-6.5
-# 50 percentile = Median
-np.percentile(A,50)
-6.5
-np.var(A)
-40.30859375
-np.std(A)
-6.348904925260734
-np.percentile(arr2,70)
-13.6
-# Enumerate for Numpy 2D Arrays
+# 2D_Array_Operations.py
+# Author: Abha Thakur
+# Description: Demonstration of basic operations on a 2D NumPy array
+
+import numpy as np
+
+# Create a 2D array
+A = np.array([
+    [1, 2, 3, 0],
+    [5, 6, 7, 22],
+    [10, 11, 1, 13],
+    [14, 15, 16, 3]
+])
+
+print("2D Array (A):\n", A)
+
+# -------------------- Basic Operations --------------------
+print("\nSum of all elements:", A.sum())
+print("Maximum value:", A.max())
+print("Minimum value:", A.min())
+
+# -------------------- Axis-based Operations --------------------
+print("\nColumn-wise Minimum Values:", np.amin(A, axis=0))
+print("Row-wise Minimum Values:", np.amin(A, axis=1))
+
+# -------------------- Statistical Operations --------------------
+print("\nMean of all elements:", A.mean())
+print("Mean using np.mean():", np.mean(A))
+print("Median:", np.median(A))
+print("50th Percentile (Median):", np.percentile(A, 50))
+print("Variance:", np.var(A))
+print("Standard Deviation:", np.std(A))
+
+# -------------------- Percentile Example --------------------
+# (using a sample array similar to arr2)
+arr2 = np.array([1, 5, 7, 10, 13, 14, 15, 17, 19, 20])
+print("\n70th Percentile of arr2:", np.percentile(arr2, 70))
+
+# -------------------- Enumerate through 2D Array --------------------
+print("\nEnumerating all elements in A:")
 for index, value in np.ndenumerate(A):
-    print(index, value)
-(0, 0) 1
-(0, 1) 2
-(0, 2) 3
-(0, 3) 0
-(1, 0) 5
-(1, 1) 6
-(1, 2) 7
-(1, 3) 22
-(2, 0) 10
-(2, 1) 11
-(2, 2) 1
-(2, 3) 13
-(3, 0) 14
-(3, 1) 15
-(3, 2) 16
-(3, 3) 3
+    print(f"Index {index}: Value = {value}")
