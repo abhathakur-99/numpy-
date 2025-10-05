@@ -177,13 +177,12 @@ array([[ 1,  2,  3,  0],
 A.sum()
 129
 # 2D_Array_Operations.py
-# Author: Abha Thakur
-# Description: Demonstration of basic operations on a 2D NumPy array
+
 
 import numpy as np
 
-# Create a 2D array
-A = np.array([
+## Create a 2D array
+```A = np.array([
     [1, 2, 3, 0],
     [5, 6, 7, 22],
     [10, 11, 1, 13],
@@ -191,30 +190,31 @@ A = np.array([
 ])
 
 print("2D Array (A):\n", A)
-
-# -------------------- Basic Operations --------------------
-print("\nSum of all elements:", A.sum())
+```
+## Basic Operations 
+```print("\nSum of all elements:", A.sum())
 print("Maximum value:", A.max())
 print("Minimum value:", A.min())
-
-# -------------------- Axis-based Operations --------------------
-print("\nColumn-wise Minimum Values:", np.amin(A, axis=0))
+```
+## Axis-based Operations 
+```print("\nColumn-wise Minimum Values:", np.amin(A, axis=0))
 print("Row-wise Minimum Values:", np.amin(A, axis=1))
-
-# -------------------- Statistical Operations --------------------
-print("\nMean of all elements:", A.mean())
+```
+## Statistical Operations 
+```print("\nMean of all elements:", A.mean())
 print("Mean using np.mean():", np.mean(A))
 print("Median:", np.median(A))
 print("50th Percentile (Median):", np.percentile(A, 50))
 print("Variance:", np.var(A))
 print("Standard Deviation:", np.std(A))
-
-# -------------------- Percentile Example --------------------
+```
+## Percentile Example 
 # (using a sample array similar to arr2)
-arr2 = np.array([1, 5, 7, 10, 13, 14, 15, 17, 19, 20])
+```arr2 = np.array([1, 5, 7, 10, 13, 14, 15, 17, 19, 20])
 print("\n70th Percentile of arr2:", np.percentile(arr2, 70))
-
-# -------------------- Enumerate through 2D Array --------------------
-print("\nEnumerating all elements in A:")
+```
+## Enumerate through 2D Array 
+```print("\nEnumerating all elements in A:")
 for index, value in np.ndenumerate(A):
     print(f"Index {index}: Value = {value}")
+```
